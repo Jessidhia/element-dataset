@@ -13,12 +13,7 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.8
-branches:
-  only:
-  - master
-  - "/^feature-.*$/"
-  - "/^hotfix-.*$/"
-  - "/^test-.*$/"
+
 sudo: false
 script:
 - npm run build
@@ -31,5 +26,4 @@ deploy:
   file: dist/element-dataset.min.js
   skip_cleanup: true
   on:
-    repo: epiloque/element-dataset
     tags: true
